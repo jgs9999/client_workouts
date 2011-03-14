@@ -81,6 +81,7 @@ class ClientWorkoutsController < ApplicationController
     end
   end
   
+  #TODO: look into case-insensitive search  
   def find
     @client_workouts = ClientWorkout.find_all_by_client_name(params[:search_string])
   end
